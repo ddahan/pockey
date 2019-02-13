@@ -10,10 +10,10 @@ import Keyboard                                               from 'simple-keybo
 export class SimpleKeyboardComponent implements AfterViewInit {
     keyboard: Keyboard;
 
-    @Input() keyboardClassName;
+    @Input() keyboardClassName = 'simple-keyboard'; // mandatory to edit use many keyboards in a same component
 
     ngAfterViewInit() {
         this.keyboard = new Keyboard(`.${ this.keyboardClassName }`,
-            {theme: 'simple-keyboard hg-theme-default hg-layout-default', });
+            {theme: 'simple-keyboard hg-theme-default hg-layout-default',});
     }
 }

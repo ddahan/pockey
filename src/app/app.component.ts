@@ -6,12 +6,8 @@ import { Component } from '@angular/core';
     styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-    keyboard1ClassName: string;
-    keyboard2ClassName: string;
 
     constructor() {
-        this.keyboard1ClassName = 'keyboard1';
-        this.keyboard2ClassName = 'keyboard2';
     }
 
 }

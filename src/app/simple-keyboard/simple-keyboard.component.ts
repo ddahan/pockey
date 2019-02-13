@@ -7,14 +7,12 @@ import Keyboard                                        from 'simple-keyboard';
     templateUrl: './simple-keyboard.component.html',
     styleUrls: ['./simple-keyboard.component.css']
 })
-export class SimpleKeyboardComponent implements OnInit {
+export class SimpleKeyboardComponent implements AfterViewInit {
     keyboard: Keyboard;
 
     @Input() keyboardClassName;
 
-    ngOnInit() {
-        console.log(`The class name will be: ` + this.keyboardClassName);
+    ngAfterViewInit() {
         this.keyboard = new Keyboard(`.${ this.keyboardClassName }`, {});
     }
-
 }

@@ -1,5 +1,5 @@
-import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
-import Keyboard                                        from 'simple-keyboard';
+import { AfterViewInit, Component, Input, ViewEncapsulation } from '@angular/core';
+import Keyboard                                               from 'simple-keyboard';
 
 @Component({
     selector: 'app-simple-keyboard',
@@ -13,6 +13,7 @@ export class SimpleKeyboardComponent implements AfterViewInit {
     @Input() keyboardClassName;
 
     ngAfterViewInit() {
-        this.keyboard = new Keyboard(`.${ this.keyboardClassName }`, {});
+        this.keyboard = new Keyboard(`.${ this.keyboardClassName }`,
+            {theme: 'simple-keyboard hg-theme-default hg-layout-default', });
     }
 }

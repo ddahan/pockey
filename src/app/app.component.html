@@ -1,9 +1,9 @@
 <div style="text-align:center">
-  <h1>Keyboard #1</h1>
-  <p>(is displayed below, working as expected)</p>
-  <app-simple-keyboard></app-simple-keyboard>
+    <h1>Keyboard #1</h1>
+    <p>(is displayed below, working as expected)</p>
+    <app-simple-keyboard [keyboardClassName]="keyboard1ClassName"></app-simple-keyboard>
 
-  <h1>Keyboard #2</h1>
-  <p>(should be displayed below, but does not)</p>
-  <app-simple-keyboard></app-simple-keyboard>
+    <h1>Keyboard #2</h1>
+    <p>(should be displayed below, but does not)</p>
+    <app-simple-keyboard [keyboardClassName]="keyboard2ClassName"></app-simple-keyboard>
 </div>
